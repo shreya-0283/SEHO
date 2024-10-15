@@ -82,7 +82,7 @@ func ScanDirectory(directory string, rdb *redis.Client) (int, error) {
 			}
 
 			// Add tags to the metadata as a comma-separated string
-			metadata["tags"] = strings.Join(tags, ",") // Convert tags slice to a comma-separated string
+			metadata["tags"] = strings.Join(tags, ", ") // Convert tags slice to a comma-separated string
 
 			// Add the upload date and time
 			now := time.Now().In(time.FixedZone("IST", 5*60*60+30*60)) // IST (UTC+5:30)
